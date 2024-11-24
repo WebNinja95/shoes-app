@@ -1,0 +1,119 @@
+/* General styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #38655c;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Admin Page layout */
+.AdminPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.add-shoe-form {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.add-shoe-form form {
+  width: 100%;
+}
+
+.add-shoe-form h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.add-shoe-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-shoe-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ddbf55;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-shoe-form button:hover {
+  background-color: #be2824;
+}
+
+/* Shoe list */
+.shoe-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.shoe-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.shoe-item h2 {
+  font-size: 20px;
+  color: #333;
+  margin-left: 20px;
+}
+
+.shoe-item p {
+  font-size: 16px;
+  color: #777;
+  margin-left: 20px;
+}
+
+.shoe-item button {
+  background-color: #ddbf55;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shoe-item button:hover {
+  background-color: #be2824;
+}
+
+.shoe-item button:first-child {
+  background-color: #007bff;
+}
+
+.shoe-item button:first-child:hover {
+  background-color: #0056b3;
+}

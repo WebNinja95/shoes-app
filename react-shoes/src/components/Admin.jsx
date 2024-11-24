@@ -6,9 +6,9 @@ import {
   addDoc,
   deleteDoc,
   doc,
-  updateDoc,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import "../css/Admin.css";
 
 export default function AdminPage() {
   const [shoes, setShoes] = useState([]);
@@ -68,7 +68,7 @@ export default function AdminPage() {
 
   // Handle edit
   const handleEdit = (id) => {
-    navigate(`/admin/edit/${id}`);
+    navigate(`/admin/edit/${id}`); // Navigate to edit page with the shoe's ID
   };
 
   // Handle remove
@@ -80,23 +80,6 @@ export default function AdminPage() {
       setShoes(shoes.filter((shoe) => shoe.id !== id));
     } catch (error) {
       console.error("Error removing shoe: ", error);
-    }
-  };
-
-  // Handle update shoe after edit
-  const handleUpdateShoe = async (id, updatedShoe) => {
-    try {
-      const shoeRef = doc(db, "shoes", id);
-      await updateDoc(shoeRef, updatedShoe);
-
-      // Update the shoe in the state immediately
-      setShoes((prevShoes) =>
-        prevShoes.map((shoe) =>
-          shoe.id === id ? { ...shoe, ...updatedShoe } : shoe
-        )
-      );
-    } catch (error) {
-      console.error("Error updating shoe: ", error);
     }
   };
 
