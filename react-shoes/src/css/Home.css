@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.Container {
+  height: 100vh;
+  width: 100%;
+  background-color: #e5c486;
+}
+
+nav {
+  display: flex;
+  background-color: #38655c;
+  width: 100%;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+button {
+  background-color: #e5c486; /* Subtle golden color */
+  color: #ffffff; /* White text for contrast */
+  width: 120px; /* Slightly wider button */
+  padding: 12px 15px; /* Balanced padding */
+  border: none;
+  border-radius: 12px; /* Smooth corners */
+  margin-right: 10px;
+  font-family: "Arial", sans-serif; /* Clean, modern font */
+  font-size: 16px; /* Larger, readable text */
+  font-weight: bold; /* Emphasized text */
+  cursor: pointer; /* Indicate interactivity */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight depth */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+button:hover {
+  background-color: #d1ac6d; /* Slightly darker shade */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Active Effect */
+button:active {
+  background-color: #be8f4e; /* Darker color for active state */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+  transform: translateY(2px); /* Pressed effect */
+}
+
+nav img {
+  width: 5%;
+  margin-left: 10px;
+}
