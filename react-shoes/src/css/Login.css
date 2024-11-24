@@ -1,16 +1,17 @@
 .warp {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #38655c;
 }
 body {
   background-color: #38655c;
 }
 
 .Form-Login {
-  height: 50vh;
+  height: 55vh;
   width: 40%;
   padding: 20px;
   background-color: #e5c486;

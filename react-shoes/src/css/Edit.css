@@ -43,3 +43,8 @@
 .EditShoe button:hover {
   background-color: #be2824;
 }
+@media (max-width: 600px) {
+  .EditShoe {
+    width: 80%;
+  }
+}
