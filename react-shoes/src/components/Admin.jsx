@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../Firebase.jsx"; // Adjust this import path
+import { db } from "../Firebase.jsx";
 import {
   collection,
   getDocs,
@@ -36,7 +36,6 @@ export default function AdminPage() {
     fetchShoes();
   }, []);
 
-  // Handle add shoe
   const handleAddShoe = async (e) => {
     e.preventDefault();
 
@@ -53,7 +52,6 @@ export default function AdminPage() {
         image: newShoe.image,
       });
 
-      // Add new shoe to the state without re-fetching
       setShoes((prevShoes) => [
         ...prevShoes,
         { id: docRef.id, ...newShoe, price: parseFloat(newShoe.price) },
@@ -66,17 +64,14 @@ export default function AdminPage() {
     }
   };
 
-  // Handle edit
   const handleEdit = (id) => {
-    navigate(`/admin/edit/${id}`); // Navigate to edit page with the shoe's ID
+    navigate(`/admin/edit/${id}`);
   };
 
-  // Handle remove
   const handleRemove = async (id) => {
     try {
       await deleteDoc(doc(db, "shoes", id));
 
-      // Remove the shoe from the state immediately
       setShoes(shoes.filter((shoe) => shoe.id !== id));
     } catch (error) {
       console.error("Error removing shoe: ", error);

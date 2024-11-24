@@ -12,9 +12,8 @@ export default function EditShoe() {
   });
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const { id } = useParams(); // Get shoe ID from URL params
+  const { id } = useParams();
 
-  // Fetch shoe data to edit
   useEffect(() => {
     const fetchShoe = async () => {
       const shoeDocRef = doc(db, "shoes", id);
@@ -30,7 +29,6 @@ export default function EditShoe() {
     fetchShoe();
   }, [id]);
 
-  // Handle update shoe
   const handleUpdateShoe = async (e) => {
     e.preventDefault();
 
@@ -47,8 +45,7 @@ export default function EditShoe() {
         image: shoe.image,
       });
 
-      // Update the shoe in the UI immediately
-      navigate("/admin"); // Navigate back to the admin page
+      navigate("/admin");
     } catch (error) {
       console.error("Error updating shoe: ", error);
     }

@@ -8,6 +8,11 @@ body {
   background-color: #e5c486;
 }
 
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 nav {
   display: flex;
   background-color: #38655c;
@@ -20,36 +25,84 @@ nav ul {
   list-style-type: none;
 }
 button {
-  background-color: #e5c486; /* Subtle golden color */
-  color: #ffffff; /* White text for contrast */
-  width: 120px; /* Slightly wider button */
-  padding: 12px 15px; /* Balanced padding */
+  background-color: #e5c486;
+  color: #ffffff;
+  width: 120px;
+  padding: 12px 15px;
   border: none;
-  border-radius: 12px; /* Smooth corners */
+  border-radius: 12px;
   margin-right: 10px;
-  font-family: "Arial", sans-serif; /* Clean, modern font */
-  font-size: 16px; /* Larger, readable text */
-  font-weight: bold; /* Emphasized text */
-  cursor: pointer; /* Indicate interactivity */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight depth */
-  transition: all 0.3s ease; /* Smooth hover effect */
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 /* Hover Effect */
 button:hover {
-  background-color: #d1ac6d; /* Slightly darker shade */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-  transform: translateY(-2px); /* Subtle lift effect */
+  background-color: #d1ac6d;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Active Effect */
 button:active {
-  background-color: #be8f4e; /* Darker color for active state */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow */
-  transform: translateY(2px); /* Pressed effect */
+  background-color: #be8f4e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
 }
 
 nav img {
   width: 5%;
   margin-left: 10px;
+}
+.shoe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.shoe-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 250px;
+}
+
+.shoe-card img {
+  width: 100%;
+  height: 55%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.shoe-card h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.shoe-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+.shoe-card button {
+  background-color: #be2824;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shoe-card button:hover {
+  background-color: #ddbf55;
 }

@@ -13,17 +13,17 @@ export default function NavBar() {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         // Get user role from Firestore
-        const userDocRef = doc(db, "users", user.uid); // Assuming 'users' collection
+        const userDocRef = doc(db, "users", user.uid);
         const userDoc = await getDoc(userDocRef);
 
         if (userDoc.exists()) {
           const userData = userDoc.data();
-          setIsAdmin(userData.role === "admin"); // Adjust based on your Firestore data structure
+          setIsAdmin(userData.role === "admin");
         } else {
           console.log("No user data found");
         }
       } else {
-        setIsAdmin(false); // If no user is logged in
+        setIsAdmin(false);
       }
       setLoading(false);
     });
@@ -37,7 +37,7 @@ export default function NavBar() {
   };
 
   if (loading) {
-    return <div>Loading...</div>; // Show a loading indicator while checking auth status
+    return <div>Loading...</div>;
   }
 
   return (
